@@ -2,72 +2,154 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Pianellina – Casa Vacanze sul Lago di Como</title>
+    <title>Pianellina – Casa Vacanze Lago di Como</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        :root {
+            --primary: #0f4c5c;
+            --secondary: #1b9aaa;
+            --light: #f2f6f7;
+            --dark: #1f2933;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
         }
 
+        /* ===== NAVBAR ===== */
         header {
-            background: #0b3c5d;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
-        nav {
-            background: #092f48;
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            letter-spacing: 1px;
         }
 
         nav a {
-            color: white;
+            margin-left: 25px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            color: var(--dark);
+            position: relative;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
         }
 
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO ===== */
         .hero {
-            height: 320px;
-            background-image: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
+            height: 420px;
+            background-image: linear-gradient(
+                rgba(15,76,92,0.45),
+                rgba(15,76,92,0.45)
+            ),
+            url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
         }
 
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+        }
+
+        /* ===== SEZIONI ===== */
         section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            color: #0b3c5d;
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 25px;
         }
 
         .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: var(--white);
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* ===== CONTATTI ===== */
+        .contacts p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contacts strong {
+            color: var(--secondary);
+        }
+
+        /* ===== FOOTER ===== */
         footer {
-            background: #0b3c5d;
+            background: var(--primary);
             color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+            padding: 25px;
+            margin-top: 80px;
+            font-size: 14px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                margin-left: 15px;
+            }
         }
     </style>
 </head>
@@ -75,40 +157,59 @@
 <body>
 
 <header>
-    <h1>Pianellina</h1>
-    <p>Casa vacanze sul Lago di Como</p>
+    <div class="navbar">
+        <div class="logo">Pianellina</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#struttura">La Casa</a>
+            <a href="#lago">Il Lago</a>
+            <a href="#contatti">Contatti</a>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#contatti">Contatti</a>
-</nav>
-
-<div class="hero"></div>
+<div class="hero">
+    <div>
+        <h1>Pianellina</h1>
+        <p>La tua casa vacanze sul Lago di Como, tra relax, natura e panorami senza tempo</p>
+    </div>
+</div>
 
 <section id="home">
     <div class="card">
-        <h2>Benvenuti a Pianellina</h2>
+        <h2>Benvenuti</h2>
         <p>
-            Pianellina è una casa vacanze immersa nella tranquillità del
-            <strong>Lago di Como</strong>, ideale per chi cerca relax,
-            natura e panorami mozzafiato.
+            Pianellina è una casa vacanze pensata per chi desidera vivere il
+            Lago di Como in modo autentico, con comfort moderni e un’atmosfera rilassante.
         </p>
+    </div>
+</section>
+
+<section id="struttura">
+    <div class="card">
+        <h2>La Casa</h2>
         <p>
-            Perfetta per coppie, famiglie e soggiorni turistici,
-            offre comfort moderni in un contesto autentico.
+            Ambienti luminosi, arredamento curato e una posizione ideale
+            per godersi la tranquillità del lago.
+        </p>
+    </div>
+</section>
+
+<section id="lago">
+    <div class="card">
+        <h2>Il Lago di Como</h2>
+        <p>
+            Uno dei laghi più affascinanti d’Europa, tra borghi storici,
+            sentieri panoramici e acque cristalline.
         </p>
     </div>
 </section>
 
 <section id="contatti">
-    <div class="card">
+    <div class="card contacts">
         <h2>Contatti</h2>
         <p><strong>Email:</strong> info@pianellina.it</p>
         <p><strong>Telefono:</strong> +39 000 000 0000</p>
-        <p>
-            Per informazioni e disponibilità non esitare a contattarci.
-        </p>
     </div>
 </section>
 
@@ -117,8 +218,7 @@
 </footer>
 
 <script>
-    // JavaScript base (espandibile in futuro)
-    console.log("Benvenuto su Pianellina");
+    console.log("Pianellina – sito caricato correttamente");
 </script>
 
 </body>
