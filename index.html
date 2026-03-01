@@ -1,187 +1,125 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Pianellina – Guida Ospiti</title>
+    <meta charset="UTF-8">
+    <title>Pianellina – Casa Vacanze sul Lago di Como</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    margin: 0;
-    background: #f7f7f7;
-    color: #222;
-}
-.container {
-    max-width: 820px;
-    margin: auto;
-    padding: 20px;
-}
-h1 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-.subtitle {
-    text-align: center;
-    color: #555;
-    margin-bottom: 30px;
-}
-.section {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.section h2 {
-    margin-top: 0;
-}
-.card {
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-    margin-top: 15px;
-}
-.button {
-    display: inline-block;
-    margin: 6px 6px 0 0;
-    padding: 10px 14px;
-    background: #0066cc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-}
-.button.secondary {
-    background: #444;
-}
-.footer {
-    text-align: center;
-    color: #666;
-    font-size: 14px;
-    margin-top: 40px;
-}
-.lang {
-    font-size: 14px;
-    color: #555;
-}
-</style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: #0b3c5d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #092f48;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            height: 320px;
+            background-image: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
+            background-size: cover;
+            background-position: center;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #0b3c5d;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #0b3c5d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
-<div class="container">
 
-<h1>La Pianellina</h1>
-<div class="subtitle">
-Guida Ospiti – Pianello del Lario · Lago di Como
-</div>
+<header>
+    <h1>Pianellina</h1>
+    <p>Casa vacanze sul Lago di Como</p>
+</header>
 
-<!-- BENVENUTO -->
-<div class="section">
-<h2>🏠 Benvenuti / Welcome</h2>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#contatti">Contatti</a>
+</nav>
 
-<p class="lang"><strong>Italiano</strong></p>
-<p>
-Benvenuti a <strong>La Pianellina</strong>!  
-In questa guida trovate tutte le informazioni utili per il vostro soggiorno:
-ristoranti, attrazioni del Lago di Como e istruzioni della casa.
-</p>
+<div class="hero"></div>
 
-<p class="lang"><strong>English</strong></p>
-<p>
-Welcome to <strong>La Pianellina</strong>!  
-This guide includes useful information for your stay:
-restaurants, places to visit around Lake Como and house instructions.
-</p>
-</div>
+<section id="home">
+    <div class="card">
+        <h2>Benvenuti a Pianellina</h2>
+        <p>
+            Pianellina è una casa vacanze immersa nella tranquillità del
+            <strong>Lago di Como</strong>, ideale per chi cerca relax,
+            natura e panorami mozzafiato.
+        </p>
+        <p>
+            Perfetta per coppie, famiglie e soggiorni turistici,
+            offre comfort moderni in un contesto autentico.
+        </p>
+    </div>
+</section>
 
-<!-- RISTORANTI -->
-<div class="section">
-<h2>🍽️ Dove mangiare / Where to eat</h2>
+<section id="contatti">
+    <div class="card">
+        <h2>Contatti</h2>
+        <p><strong>Email:</strong> info@pianellina.it</p>
+        <p><strong>Telefono:</strong> +39 000 000 0000</p>
+        <p>
+            Per informazioni e disponibilità non esitare a contattarci.
+        </p>
+    </div>
+</section>
 
-<div class="card">
-<h3>🍕 Spinnaker – Pizzeria</h3>
-<p>Pizzeria – Cucina italiana</p>
+<footer>
+    © 2026 Pianellina – Casa Vacanze Lago di Como
+</footer>
 
-<a class="button" href="tel:+390344000000">📞 Chiama / Call</a>
-<a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Spinnaker+Pizzeria+Pianello+del+Lario" target="_blank">
-🗺️ Apri su Maps
-</a>
+<script>
+    // JavaScript base (espandibile in futuro)
+    console.log("Benvenuto su Pianellina");
+</script>
 
-<p><em>Ideale per pranzo e cena</em></p>
-</div>
-</div>
-
-<!-- ATTRAZIONI -->
-<div class="section">
-<h2>🏛️ Posti da visitare / Places to visit</h2>
-
-<div class="card">
-<h3>Villa Carlotta</h3>
-<p>
-Villa storica con museo e giardino botanico a Tremezzo.<br>
-Historic villa with museum and botanical garden.
-</p>
-<a class="button secondary" href="https://www.villacarlotta.it" target="_blank">🌐 Sito web</a>
-<a class="button" href="https://www.google.com/maps/search/?api=1&query=Villa+Carlotta+Tremezzo" target="_blank">🗺️ Indicazioni</a>
-</div>
-
-<div class="card">
-<h3>Villa del Balbianello</h3>
-<p>
-Una delle ville più famose del Lago di Como.<br>
-One of the most famous villas on Lake Como.
-</p>
-<a class="button secondary" href="https://fondoambiente.it" target="_blank">🌐 Sito web</a>
-<a class="button" href="https://www.google.com/maps/search/?api=1&query=Villa+del+Balbianello+Lenno" target="_blank">🗺️ Indicazioni</a>
-</div>
-
-<div class="card">
-<h3>Bellagio</h3>
-<p>
-Borgo iconico del Lago di Como.<br>
-Iconic village on Lake Como.
-</p>
-<a class="button secondary" href="https://www.bellagiolakecomo.com" target="_blank">🌐 Info</a>
-<a class="button" href="https://www.google.com/maps/search/?api=1&query=Bellagio+Lago+di+Como" target="_blank">🗺️ Indicazioni</a>
-</div>
-</div>
-
-<!-- ISTRUZIONI CASA -->
-<div class="section">
-<h2>🏠 Istruzioni della casa / House instructions</h2>
-
-<h3>🔌 Se va via la corrente / Power outage</h3>
-<p>
-Controllare il contatore e riattivare l’interruttore generale.<br>
-Check the electrical panel and reset the main switch.
-</p>
-
-<h3>🚪 Cancello automatico / Automatic gate</h3>
-<p>
-Verificare che non ci siano ostacoli e riprovare.<br>
-Check for obstacles and try again.
-</p>
-
-<h3>📶 Wi-Fi</h3>
-<p>
-Nome rete / Network: <strong>XXXXXXXX</strong><br>
-Password: <strong>XXXXXXXX</strong>
-</p>
-</div>
-
-<!-- CONTATTI -->
-<div class="section">
-<h2>📞 Contatti utili / Useful contacts</h2>
-<p>
-Host – La Pianellina (da inserire)<br>
-Emergenze / Emergencies: <strong>112</strong>
-</p>
-</div>
-
-<div class="footer">
-Grazie per aver scelto La Pianellina · Enjoy your stay!
-</div>
-
-</div>
 </body>
 </html>
