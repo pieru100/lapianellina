@@ -15,10 +15,7 @@
     --white: #ffffff;
 }
 
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+* { box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -27,7 +24,6 @@ body {
     color: var(--dark);
 }
 
-/* ===== NAVBAR ===== */
 header {
     position: sticky;
     top: 0;
@@ -45,11 +41,7 @@ header {
     align-items: center;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 22px;
-    color: var(--primary);
-}
+.logo { font-weight: bold; font-size: 22px; color: var(--primary); }
 
 nav a {
     margin-left: 20px;
@@ -57,17 +49,12 @@ nav a {
     font-weight: 600;
     color: var(--dark);
 }
+nav a:hover { color: var(--secondary); }
 
-nav a:hover {
-    color: var(--secondary);
-}
-
-/* ===== HERO ===== */
 .hero {
     height: 420px;
-    background:
-        linear-gradient(rgba(15,76,92,0.45), rgba(15,76,92,0.45)),
-        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
+    background: linear-gradient(rgba(15,76,92,0.45), rgba(15,76,92,0.45)),
+                url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
     background-size: cover;
     background-position: center;
     color: white;
@@ -77,42 +64,14 @@ nav a:hover {
     text-align: center;
     padding: 20px;
 }
+.hero h1 { font-size: 42px; }
+.hero p { font-size: 18px; max-width: 700px; }
 
-.hero h1 {
-    font-size: 42px;
-}
+section { max-width: 1000px; margin: 80px auto; padding: 0 25px; }
+h2 { color: var(--primary); margin-bottom: 20px; }
+.card { background: var(--white); padding: 30px; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.08); margin-bottom: 30px; }
+.card h3 { margin-top: 0; color: var(--secondary); }
 
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-}
-
-/* ===== SECTIONS ===== */
-section {
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 0 25px;
-}
-
-h2 {
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
-}
-
-.card h3 {
-    margin-top: 0;
-    color: var(--secondary);
-}
-
-/* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
     margin-top: 12px;
@@ -125,32 +84,15 @@ h2 {
     font-weight: 600;
     font-size: 14px;
 }
+.btn.alt { background: var(--accent); }
+.btn:hover { opacity: 0.9; }
 
-.btn.alt {
-    background: var(--accent);
-}
+.info-list li { margin-bottom: 12px; }
 
-.btn:hover {
-    opacity: 0.9;
-}
+footer { background: var(--primary); color: white; text-align: center; padding: 25px; margin-top: 80px; font-size: 14px; }
 
-/* ===== INFO CASA ===== */
-.info-list li {
-    margin-bottom: 12px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 80px;
-    font-size: 14px;
-}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -169,76 +111,61 @@ footer {
 <div class="hero" id="home">
     <div>
         <h1>Benvenuti a Pianellina</h1>
-        <p>
-            Scansiona il QR e scopri ristoranti, attrazioni e tutte
-            le informazioni utili per il tuo soggiorno sul Lago di Como.
-        </p>
+        <p>Scansiona il QR e scopri ristoranti, attrazioni e informazioni utili per il tuo soggiorno sul Lago di Como.</p>
     </div>
 </div>
 
-<!-- ===== RISTORANTI ===== -->
+<!-- RISTORANTI -->
 <section id="ristoranti">
 <h2>Dove mangiare</h2>
-
 <div class="card">
     <h3>🍕 Spinnaker – Pizzeria</h3>
-    <p>Pizzeria e ristorante informale, ideale per pranzo o cena.</p>
-    <a class="btn" href="tel:+390000000000">Chiama</a>
+    <p>Pizzeria e ristorante affacciato sul Lago di Como, ideale per pranzo e cena.</p>
+    <a class="btn" href="tel:+39034487077">Chiama</a>
     <a class="btn alt" href="https://www.spinnaker.it" target="_blank">Sito web</a>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Spinnaker+pizzeria" target="_blank">
-        Apri in Maps
-    </a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Spinnaker+pizzeria+Lago+di+Como" target="_blank">Apri in Maps</a>
 </div>
 </section>
 
-<!-- ===== ATTRAZIONI ===== -->
+<!-- ATTRAZIONI -->
 <section id="attrazioni">
 <h2>Cosa visitare</h2>
 
 <div class="card">
     <h3>🏛 Villa Carlotta</h3>
-    <p>Villa storica con giardini botanici affacciati sul lago.</p>
+    <p>Villa storica con museo e giardino botanico, una delle attrazioni più visitate del Lago di Como.</p>
     <a class="btn alt" href="https://www.villacarlotta.it" target="_blank">Sito ufficiale</a>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Villa+Carlotta" target="_blank">
-        Indicazioni Maps
-    </a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Villa+Carlotta+Tremezzina" target="_blank">Indicazioni Maps</a>
 </div>
 
 <div class="card">
     <h3>🏛 Villa del Balbianello</h3>
-    <p>Una delle ville più iconiche del Lago di Como.</p>
-    <a class="btn alt" href="https://fondoambiente.it" target="_blank">Sito ufficiale</a>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Villa+del+Balbianello" target="_blank">
-        Indicazioni Maps
-    </a>
+    <p>Villa iconica del Lago di Como, famosa per matrimoni e set cinematografici.</p>
+    <a class="btn alt" href="https://fondoambiente.it/luoghi/villa-del-balbianello" target="_blank">Sito ufficiale</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Villa+del+Balbianello" target="_blank">Indicazioni Maps</a>
 </div>
 
 <div class="card">
     <h3>🌅 Bellagio</h3>
-    <p>Il borgo più famoso del lago, tra vicoli e panorami mozzafiato.</p>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bellagio+Como" target="_blank">
-        Indicazioni Maps
-    </a>
+    <p>Il borgo più famoso del Lago di Como, noto per i suoi vicoli e panorami mozzafiato.</p>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bellagio+Como" target="_blank">Indicazioni Maps</a>
 </div>
 </section>
 
-<!-- ===== INFO CASA ===== -->
+<!-- INFO CASA -->
 <section id="info">
 <h2>Informazioni utili sulla casa</h2>
-
 <div class="card">
 <ul class="info-list">
-    <li><strong>Se va via la corrente:</strong> controlla il quadro elettrico vicino all’ingresso e rialza il contatore.</li>
-    <li><strong>Se il cancello automatico non funziona:</strong> verifica che non ci sia un blackout e utilizza lo sblocco manuale.</li>
-    <li><strong>Emergenze:</strong> in caso di necessità contattare il proprietario (contatti in arrivo).</li>
+    <li><strong>Se va via la corrente:</strong> controllare il quadro elettrico vicino all’ingresso e rialza il contatore generale.</li>
+    <li><strong>Se il cancello automatico non funziona:</strong> verifica blackout o utilizza lo sblocco manuale.</li>
 </ul>
 </div>
 </section>
 
-<!-- ===== CONTATTI ===== -->
+<!-- CONTATTI -->
 <section id="contatti">
 <h2>Contatti Pianellina</h2>
-
 <div class="card">
 <p>I contatti della struttura verranno inseriti a breve.</p>
 </div>
