@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Pianellina – Casa Vacanze Lago di Como</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- QR Code library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 30px;
+            border-radius: 8px;
+            font-size: 3rem;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+            background: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2c6e91;
+        }
+
+        .qr-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: #2c6e91;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pianellina<br>Casa Vacanze</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#contatti">Contatti</a>
+</nav>
+
+<section id="home">
+    <h2>Benvenuti a Pianellina</h2>
+    <p>
+        Pianellina è una casa vacanze accogliente situata nei pressi del Lago di Como,
+        ideale per rilassarsi immersi nella natura, tra panorami mozzafiato e comfort moderni.
+    </p>
+    <p>
+        Perfetta per coppie, famiglie e amanti della tranquillità, offre un soggiorno autentico
+        a pochi minuti dalle principali attrazioni del lago.
+    </p>
+</section>
+
+<section id="contatti">
+    <h2>Contatti</h2>
+    <p>
+        📧 Email: <strong>info@pianellina.it</strong><br>
+        📞 Telefono: <strong>+39 333 1234567</strong>
+    </p>
+
+    <div class="qr-container">
+        <h3>Scansiona il QR code</h3>
+        <div id="qrcode"></div>
+        <p>Accedi direttamente alla pagina Pianellina</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Pianellina – Casa Vacanze Lago di Como
+</footer>
+
+<script>
+    // URL della pagina (MODIFICA QUI quando avrai l'indirizzo reale)
+    const pageUrl = "https://www.tuosito.it/pianellina";
+
+    new QRCode(document.getElementById("qrcode"), {
+        text: pageUrl,
+        width: 160,
+        height: 160
+    });
+</script>
+
+</body>
+</html>
