@@ -1,132 +1,54 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pianellina – Casa Vacanze Lago di Como</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- QR Code library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        header h1 {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px 30px;
-            border-radius: 8px;
-            font-size: 3rem;
-        }
-
-        nav {
-            background: #ffffff;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-            background: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #2c6e91;
-        }
-
-        .qr-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            background: #2c6e91;
-            color: white;
-        }
-    </style>
+    <title>Vacation Rental Property</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
-<header>
-    <h1>Pianellina<br>Casa Vacanze</h1>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#contatti">Contatti</a>
-</nav>
-
-<section id="home">
-    <h2>Benvenuti a Pianellina</h2>
-    <p>
-        Pianellina è una casa vacanze accogliente situata nei pressi del Lago di Como,
-        ideale per rilassarsi immersi nella natura, tra panorami mozzafiato e comfort moderni.
-    </p>
-    <p>
-        Perfetta per coppie, famiglie e amanti della tranquillità, offre un soggiorno autentico
-        a pochi minuti dalle principali attrazioni del lago.
-    </p>
-</section>
-
-<section id="contatti">
-    <h2>Contatti</h2>
-    <p>
-        📧 Email: <strong>info@pianellina.it</strong><br>
-        📞 Telefono: <strong>+39 333 1234567</strong>
-    </p>
-
-    <div class="qr-container">
-        <h3>Scansiona il QR code</h3>
-        <div id="qrcode"></div>
-        <p>Accedi direttamente alla pagina Pianellina</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 Pianellina – Casa Vacanze Lago di Como
-</footer>
-
-<script>
-    // URL della pagina (MODIFICA QUI quando avrai l'indirizzo reale)
-    const pageUrl = "https://www.tuosito.it/pianellina";
-
-    new QRCode(document.getElementById("qrcode"), {
-        text: pageUrl,
-        width: 160,
-        height: 160
-    });
-</script>
-
+    <header>
+        <h1>Welcome to Our Vacation Rental!</h1>
+    </header>
+    <main>
+        <section id="restaurants">
+            <h2>Restaurants</h2>
+            <div class="restaurant">
+                <h3>Spinnaker Pizzeria</h3>
+                <img src="path-to-qr-code/spinnaker-qr.png" alt="QR Code for Spinnaker Pizzeria">
+                <p>Delicious pizzas with a beautiful view!</p>
+            </div>
+        </section>
+        <section id="attractions">
+            <h2>Attractions</h2>
+            <ul>
+                <li>
+                    <h3>Villa Carlotta</h3>
+                    <img src="path-to-qr-code/villa-carlotta-qr.png" alt="QR Code for Villa Carlotta">
+                </li>
+                <li>
+                    <h3>Villa Balbianello</h3>
+                    <img src="path-to-qr-code/villa-balbianello-qr.png" alt="QR Code for Villa Balbianello">
+                </li>
+                <li>
+                    <h3>Bellagio</h3>
+                    <img src="path-to-qr-code/bellagio-qr.png" alt="QR Code for Bellagio">
+                </li>
+            </ul>
+        </section>
+        <section id="house-instructions">
+            <h2>House Instructions</h2>
+            <h3>Emergency Instructions</h3>
+            <ul>
+                <li>For electricity issues, please check the circuit breaker located in the hallway.
+                </li>
+                <li>For the automatic gate, use the remote found in the kitchen drawer.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Vacation Rental Property</p>
+    </footer>
 </body>
 </html>
