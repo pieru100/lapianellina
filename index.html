@@ -1,225 +1,252 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Pianellina – Casa Vacanze Lago di Como</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Pianellina – Guida Ospiti</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --primary: #0f4c5c;
-            --secondary: #1b9aaa;
-            --light: #f2f6f7;
-            --dark: #1f2933;
-            --white: #ffffff;
-        }
+<style>
+:root {
+    --primary: #0f4c5c;
+    --secondary: #1b9aaa;
+    --accent: #f4a261;
+    --light: #f6f9fa;
+    --dark: #1f2933;
+    --white: #ffffff;
+}
 
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Roboto, Arial, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+}
 
-        /* ===== NAVBAR ===== */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: var(--white);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
+/* ===== NAVBAR ===== */
+header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
 
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 15px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--primary);
-            letter-spacing: 1px;
-        }
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--primary);
+}
 
-        nav a {
-            margin-left: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--dark);
-            position: relative;
-        }
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--dark);
+}
 
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            transition: width 0.3s ease;
-        }
+nav a:hover {
+    color: var(--secondary);
+}
 
-        nav a:hover::after {
-            width: 100%;
-        }
+/* ===== HERO ===== */
+.hero {
+    height: 420px;
+    background:
+        linear-gradient(rgba(15,76,92,0.45), rgba(15,76,92,0.45)),
+        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
 
-        /* ===== HERO ===== */
-        .hero {
-            height: 420px;
-            background-image: linear-gradient(
-                rgba(15,76,92,0.45),
-                rgba(15,76,92,0.45)
-            ),
-            url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
+.hero h1 {
+    font-size: 42px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+}
 
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-        }
+/* ===== SECTIONS ===== */
+section {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 25px;
+}
 
-        /* ===== SEZIONI ===== */
-        section {
-            max-width: 1000px;
-            margin: 80px auto;
-            padding: 0 25px;
-        }
+h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
 
-        .card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 14px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-        }
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
 
-        h2 {
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
+.card h3 {
+    margin-top: 0;
+    color: var(--secondary);
+}
 
-        /* ===== CONTATTI ===== */
-        .contacts p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 10px;
+    padding: 10px 16px;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
 
-        .contacts strong {
-            color: var(--secondary);
-        }
+.btn.alt {
+    background: var(--accent);
+}
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 80px;
-            font-size: 14px;
-        }
+.btn:hover {
+    opacity: 0.9;
+}
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 34px;
-            }
+/* ===== INFO CASA ===== */
+.info-list li {
+    margin-bottom: 12px;
+}
 
-            nav a {
-                margin-left: 15px;
-            }
-        }
-    </style>
+/* ===== FOOTER ===== */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 80px;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="navbar">
-        <div class="logo">Pianellina</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#struttura">La Casa</a>
-            <a href="#lago">Il Lago</a>
-            <a href="#contatti">Contatti</a>
-        </nav>
-    </div>
+<div class="navbar">
+    <div class="logo">Pianellina</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#ristoranti">Dove mangiare</a>
+        <a href="#attrazioni">Cosa visitare</a>
+        <a href="#info">Info casa</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+</div>
 </header>
 
-<div class="hero">
+<div class="hero" id="home">
     <div>
-        <h1>Pianellina</h1>
-        <p>La tua casa vacanze sul Lago di Como, tra relax, natura e panorami senza tempo</p>
+        <h1>Benvenuti a Pianellina</h1>
+        <p>
+            Scansiona il QR e scopri ristoranti, attrazioni e tutte
+            le informazioni utili per il tuo soggiorno sul Lago di Como.
+        </p>
     </div>
 </div>
 
-<section id="home">
-    <div class="card">
-        <h2>Benvenuti</h2>
-        <p>
-            Pianellina è una casa vacanze pensata per chi desidera vivere il
-            Lago di Como in modo autentico, con comfort moderni e un’atmosfera rilassante.
-        </p>
-    </div>
+<!-- ===== RISTORANTI ===== -->
+<section id="ristoranti">
+<h2>Dove mangiare</h2>
+
+<div class="card">
+    <h3>🍕 Spinnaker – Pizzeria</h3>
+    <p>Pizzeria e ristorante informale, ideale per pranzo o cena.</p>
+    <a class="btn" href="tel:+390000000000">Chiama</a>
+    <a class="btn alt" href="https://www.spinnaker.it" target="_blank">Sito web</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Spinnaker+pizzeria" target="_blank">
+        Apri in Maps
+    </a>
+</div>
 </section>
 
-<section id="struttura">
-    <div class="card">
-        <h2>La Casa</h2>
-        <p>
-            Ambienti luminosi, arredamento curato e una posizione ideale
-            per godersi la tranquillità del lago.
-        </p>
-    </div>
+<!-- ===== ATTRAZIONI ===== -->
+<section id="attrazioni">
+<h2>Cosa visitare</h2>
+
+<div class="card">
+    <h3>🏛 Villa Carlotta</h3>
+    <p>Villa storica con giardini botanici affacciati sul lago.</p>
+    <a class="btn alt" href="https://www.villacarlotta.it" target="_blank">Sito ufficiale</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Villa+Carlotta" target="_blank">
+        Indicazioni Maps
+    </a>
+</div>
+
+<div class="card">
+    <h3>🏛 Villa del Balbianello</h3>
+    <p>Una delle ville più iconiche del Lago di Como.</p>
+    <a class="btn alt" href="https://fondoambiente.it" target="_blank">Sito ufficiale</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Villa+del+Balbianello" target="_blank">
+        Indicazioni Maps
+    </a>
+</div>
+
+<div class="card">
+    <h3>🌅 Bellagio</h3>
+    <p>Il borgo più famoso del lago, tra vicoli e panorami mozzafiato.</p>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bellagio+Como" target="_blank">
+        Indicazioni Maps
+    </a>
+</div>
 </section>
 
-<section id="lago">
-    <div class="card">
-        <h2>Il Lago di Como</h2>
-        <p>
-            Uno dei laghi più affascinanti d’Europa, tra borghi storici,
-            sentieri panoramici e acque cristalline.
-        </p>
-    </div>
+<!-- ===== INFO CASA ===== -->
+<section id="info">
+<h2>Informazioni utili sulla casa</h2>
+
+<div class="card">
+<ul class="info-list">
+    <li><strong>Se va via la corrente:</strong> controlla il quadro elettrico vicino all’ingresso e rialza il contatore.</li>
+    <li><strong>Se il cancello automatico non funziona:</strong> verifica che non ci sia un blackout e utilizza lo sblocco manuale.</li>
+    <li><strong>Emergenze:</strong> in caso di necessità contattare il proprietario (contatti in arrivo).</li>
+</ul>
+</div>
 </section>
 
+<!-- ===== CONTATTI ===== -->
 <section id="contatti">
-    <div class="card contacts">
-        <h2>Contatti</h2>
-        <p><strong>Email:</strong> info@pianellina.it</p>
-        <p><strong>Telefono:</strong> +39 000 000 0000</p>
-    </div>
+<h2>Contatti Pianellina</h2>
+
+<div class="card">
+<p>I contatti della struttura verranno inseriti a breve.</p>
+</div>
 </section>
 
 <footer>
-    © 2026 Pianellina – Casa Vacanze Lago di Como
+© 2026 Pianellina – Guida Ospiti Digitale
 </footer>
-
-<script>
-    console.log("Pianellina – sito caricato correttamente");
-</script>
 
 </body>
 </html>
